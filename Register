@@ -1,0 +1,48 @@
+package com.demo;
+
+import java.util.Date;
+import java.util.Scanner;
+
+public class Register {
+	public static void main(String args[]) {
+		Scanner in =new Scanner(System.in);
+		
+		System.out.println("Enter Your UserName");
+		String username = in.nextLine();
+		System.out.println("Enter Your Password");
+		String password = in.nextLine();
+		System.out.println("Enter Your Email");
+		String email = in.nextLine();
+		System.out.println("Enter Your MobileNumber");
+		long mobilenumber = in.nextLong();
+		in.nextLine();
+		System.out.println("Enter Your Address");
+		String address= in.nextLine();
+		
+		
+		Date createAt = new Date();
+		Date updateAt = new Date();
+		boolean isActive =true;
+		Encapsulation person1 =new Encapsulation();
+			person1.setUsername(username);
+			person1.setPassword(password);
+			person1.setEmail(email);
+			person1.setAddress(address);
+			person1.setMobilenumber(mobilenumber);
+			person1.setcreateAt(createAt);
+			person1.setupdateAt(updateAt);
+			person1.setisActiveAt(isActive);
+			
+			
+			System.out.println(person1.getUsername());
+			System.out.println(person1.getPassword());
+			System.out.println(person1.getEmail());
+			System.out.println(person1.getAddress());
+			System.out.println(person1.getMobilenumber());
+			System.out.println(person1.getcreateAt());
+			System.out.println(person1.getupdateAt());			
+			System.out.println(person1.getisActive());
+			
+		
+	}
+}
