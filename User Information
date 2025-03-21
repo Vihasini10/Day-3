@@ -1,0 +1,76 @@
+package com.demo;
+
+
+import java.util.Date;
+import java.util.Scanner;
+
+public class Register {
+	public static void main(String args[]) {
+		Scanner in =new Scanner(System.in);
+		Encapsulation person1 =new Encapsulation();
+		boolean running=true;
+		while(running)
+		{
+			System.out.println("1.)Are You New User");
+			System.out.println("2)Existing User");
+			System.out.println("3)Exits");
+			System.out.println("Enter The Number");
+			int option= in.nextInt();
+			in.nextLine();
+			
+			if(option==1) {
+		
+			System.out.println("Enter Your UserName");
+			String username = in.nextLine();
+			System.out.println("Enter Your Password");
+			String password = in.nextLine();
+			System.out.println("Enter Your Email");
+			String email = in.nextLine();
+			System.out.println("Enter Your MobileNumber");
+			long mobilenumber = in.nextLong();
+			in.nextLine();
+			System.out.println("Enter Your Address");
+			String address= in.nextLine();
+		
+		
+			Date createAt = new Date();
+			Date updateAt = new Date();
+			boolean isActive =true;
+		
+		
+			
+			person1.setUsername(username);
+			person1.setPassword(password);
+			person1.setEmail(email);
+			person1.setAddress(address);
+			person1.setMobilenumber(mobilenumber);
+			person1.setcreateAt(createAt);
+			person1.setupdateAt(updateAt);
+			person1.setisActive(isActive);
+			
+			}
+			else if(option==2) {
+				
+				System.out.println(person1.getUsername());
+				System.out.println(person1.getPassword());
+				System.out.println(person1.getEmail());
+				System.out.println(person1.getAddress());
+				System.out.println(person1.getMobilenumber());
+				System.out.println(person1.getcreateAt());
+				System.out.println(person1.getupdateAt());			
+				System.out.println(person1.getisActive());
+				
+			}
+			
+			else if(option==3) {
+				running=false;
+			}
+			
+			else {
+				System.out.println("invalid input ");
+			}
+		}
+				in.close();
+		
+		}
+	}
